@@ -2,7 +2,10 @@ const mongoose = require("mongoose")
 
 const schema = mongoose.Schema({
     comment: String,
-    userId : String,
+    blogId : String,
+    user: 
+        { type: mongoose.Schema.Types.ObjectId, ref: 'User' }
+      ,
     created_on: String,
 })
 
